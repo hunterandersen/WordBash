@@ -79,6 +79,9 @@ const AuthShowcase: React.FC = () => {
       >
         {sessionData ? "Sign out" : "Sign in"}
       </button>
+      {sessionData && <div>
+          <p>{`User: ${sessionData.user.toString()}`}</p>
+        </div>}
     </div>
   );
 };
